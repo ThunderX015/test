@@ -1,0 +1,56 @@
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8; /* Light grey background */
+  color: #333; /* Dark text color */
+  margin: 0;
+  padding: 0;
+}
+
+/* Form container styling */
+.form-box {
+  border: 1px solid pink;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  max-width: 50%; /* Adjust width as needed */
+  margin: 20px auto; /* Center the form horizontally */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Form element styling */
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"],
+form textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* FAQ box styling */
+.faq-box {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.faq-box label {
+  font-weight: bold;
+}
+
+.faq-box textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}

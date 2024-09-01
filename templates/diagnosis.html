@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>feminaCure - Diagnosis Results</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+        color: #333;
+      }
+      h1 {
+        text-align: center;
+        color: pink;
+      }
+      p {
+        margin: 10px 0;
+      }
+      input[type="text"],
+      input[type="submit"] {
+        display: block;
+        width: calc(100% - 22px);
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+      }
+      input[type="submit"] {
+        background-color: pink;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Diagnosis Results</h1>
+    <div class="results-box">
+      <h2>Hello {{ name }}!</h2>
+      <p>
+        {% if diagnosis %} {% for result in diagnosis %} {{ result }}<br />
+        {% endfor %} {% else %} The patient is not affected by any of the above
+        5 diseases. {% endif %}
+      </p>
+      <div class="faq">
+        <h3>Frequently Asked Questions</h3>
+        <form action="/diagnose/1" method="POST">
+          <label for="faq">Ask a question:</label>
+          <input
+            type="text"
+            id="faq"
+            name="faq"
+            placeholder="Ask a question"
+          /><br />
+          <input type="submit" value="Submit" />
+        </form>
+        <p>{{ faq_answer }}</p>
+      </div>
+    </div>
+  </body>
+</html>

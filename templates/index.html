@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feminaCure - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: pink;
+        }
+        #gender{
+            width: 100%;
+        }
+        input[type="text"], select, input[type="submit"] {
+            display: block;
+            width: calc(100% - 22px);
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background-color: pink;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+    </style>
+<body>
+    <h1>feminaCure - Diagnosis</h1>
+    <div class="form-box">
+        <form action="/diagnose/0" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" required>
+
+            <label for="symptoms">Symptoms:</label>
+            <input type="text" id="symptoms" name="symptoms" placeholder="Enter symptoms separated by commas" required>
+            <br/>
+            <input type="submit" value="Diagnose">
+        </form>
+    </div>
+</body>
+</html>
